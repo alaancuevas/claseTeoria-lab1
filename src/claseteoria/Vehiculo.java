@@ -10,13 +10,13 @@ import javax.swing.JOptionPane;
  *
  * @author Carlitos
  */
-public class Auto {
+public class Vehiculo {
 
     private int posX;
     private int posY;
     private boolean chocado;
 
-    public Auto(int posX, int posY) {
+    public Vehiculo(int posX, int posY) {
         this.posX = posX;
         this.posY = posY;
     }

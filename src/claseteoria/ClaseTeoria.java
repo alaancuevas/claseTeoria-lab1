@@ -11,10 +11,10 @@ package claseteoria;
 public class ClaseTeoria {
 
     public static void main(String[] args) {
-        Auto fitito = new Auto(2, 10);
+        Vehiculo fitito = new Vehiculo(2, 10);
         Escena miEscena = new Escena(fitito);
         miEscena.Jugar();
-        miEscena.setAuto(fitito);
+        miEscena.setVehiculo(fitito);
     }
 
 }
