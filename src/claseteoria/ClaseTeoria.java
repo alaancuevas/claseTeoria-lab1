@@ -4,7 +4,6 @@
  */
 package claseteoria;
 
-import java.util.Scanner;
 /**
  *
  * @author Carlitos
@@ -17,5 +16,5 @@ public class ClaseTeoria {
         miEscena.Jugar();
         miEscena.setAuto(fitito);
     }
-    
+
 }

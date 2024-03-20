@@ -10,12 +10,13 @@ public class Escena {
         this.auto = auto;
         this.pared = new Pared();
     }
+
     public void Jugar() {
         Scanner scanner = new Scanner(System.in);
         char mover;
 
         do {
-            System.out.println("Instrucciones: (W - Arriba, A - Izquierda, S - Abajo, D - Derecha, E - Salir): ");
+            System.out.print("Instrucciones: (W - Arriba, A - Izquierda, S - Abajo, D - Derecha, E - Salir): ");
             mover = Character.toLowerCase(scanner.next().charAt(0));
 
             switch (mover) {
@@ -62,8 +63,8 @@ public class Escena {
             }
 
         } while (mover != 'e');
-
     }
+
     public void setAuto(Auto nuevoAuto) {
         this.auto = nuevoAuto;
     }

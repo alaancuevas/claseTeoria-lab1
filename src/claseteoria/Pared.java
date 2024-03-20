@@ -14,10 +14,10 @@ public class Pared {
     private int posY;
 
     public Pared() {
-        posX=(int)(Math.random()*75);
-        posY=(int)(Math.random()*17);
+        posX = (int) (Math.random() * 75);
+        posY = (int) (Math.random() * 17);
         System.out.println("-------------------------------------");
-        System.out.println("Posicion de la PARED (X,Y) ("+posX+" , ("+posY+")");
+        System.out.println("Posicion de la PARED es (X = " + posX + ") | (Y = " + posY + ")");
         System.out.println("-------------------------------------");
     }
 
@@ -28,6 +28,5 @@ public class Pared {
     public int getPosY() {
         return posY;
     }
-
 
 }

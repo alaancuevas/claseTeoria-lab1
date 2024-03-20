@@ -46,38 +46,38 @@ public class Auto {
     }
 
     public void moverArriba() {
-        if(!chocado && posY > 0){
+        if (!chocado && posY > 0) {
             posY -= 1;
-            System.out.println("La posición (X,Y) es: " + posX +" "+ posY);
-        }else{
-            JOptionPane.showMessageDialog(null,"No se puede mover");
+            System.out.println("La posición del auto es (X = " + posX + ") | (Y = " + posY + ")");
+        } else {
+            JOptionPane.showMessageDialog(null, "No se puede mover");
         }
     }
 
     public void moverAbajo() {
-        if(!chocado && posY < 22){
+        if (!chocado && posY < 22) {
             posY += 1;
-            System.out.println("La posición (X,Y) es: " + posX +" "+ posY);
-        }else{
-            JOptionPane.showMessageDialog(null,"No se puede mover");
+            System.out.println("La posición del auto es (X = " + posX + ") | (Y = " + posY + ")");
+        } else {
+            JOptionPane.showMessageDialog(null, "No se puede mover");
         }
     }
 
     public void moverIzquierda() {
-        if(!chocado && posX > 0){
+        if (!chocado && posX > 0) {
             posX -= 1;
-            System.out.println("La posición (X,Y) es: " + posX +" "+ posY);
-        }else{
-            JOptionPane.showMessageDialog(null,"No se puede mover");
+            System.out.println("La posición del auto es (X = " + posX + ") | (Y = " + posY + ")");
+        } else {
+            JOptionPane.showMessageDialog(null, "No se puede mover");
         }
     }
 
     public void moverDerecha() {
-        if(!chocado && posX < 80){
+        if (!chocado && posX < 80) {
             posX += 1;
-           System.out.println("La posición (X,Y) es: " + posX +" "+ posY);
-        }else{
-            JOptionPane.showMessageDialog(null,"No se puede mover");
+            System.out.println("La posición del auto es (X = " + posX + ") | (Y = " + posY + ")");
+        } else {
+            JOptionPane.showMessageDialog(null, "No se puede mover");
         }
     }
 
