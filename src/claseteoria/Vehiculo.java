@@ -6,15 +6,20 @@ import javax.swing.JOptionPane;
  *
  * @author Carlitos
  */
-public abstract class  Vehiculo {
+public abstract class Vehiculo {
+
+    public static final int LIMIT_X = 80;
+    public static final int LIMIT_Y = 22;
 
     protected int posX;
     protected int posY;
     protected boolean chocado;
+    protected int speed;
 
-    public Vehiculo(int posX, int posY) {
+    public Vehiculo(int posX, int posY, int speed) {
         this.posX = posX;
         this.posY = posY;
+        this.speed = speed;
     }
 
     public int getPosX() {
@@ -41,40 +46,48 @@ public abstract class  Vehiculo {
         this.chocado = chocado;
     }
 
+    public void setSpeed(int speed) {
+        this.speed = speed;
+    }
+
+    public int getSpeed() {
+        return speed;
+    }
+
     public void moverArriba() {
-//        if (!chocado && posY > 0) {
-//            posY -= 1;
-//            System.out.println("La posición del auto es (X = " + posX + ") | (Y = " + posY + ")");
-//        } else {
-//            JOptionPane.showMessageDialog(null, "No se puede mover");
-//        }
+        if (!chocado && posY > 0) {
+            setPosY(getPosY() - speed);
+            System.out.println("La posición del vehículo es (X = " + posX + ") | (Y = " + posY + ")");
+        } else {
+            System.out.println("Chocaste con el limite.");
+        }
     }
 
     public void moverAbajo() {
-//        if (!chocado && posY < 22) {
-//            posY += 1;
-//            System.out.println("La posición del auto es (X = " + posX + ") | (Y = " + posY + ")");
-//        } else {
-//            JOptionPane.showMessageDialog(null, "No se puede mover");
-//        }
-    }
-
-    public void moverIzquierda() {
-//        if (!chocado && posX > 0) {
-//            posX -= 1;
-//            System.out.println("La posición del auto es (X = " + posX + ") | (Y = " + posY + ")");
-//        } else {
-//            JOptionPane.showMessageDialog(null, "No se puede mover");
-//        }
+        if (!chocado && posY < LIMIT_Y - speed) {
+            setPosY(getPosY() + speed);
+            System.out.println("La posición del vehículo es (X = " + posX + ") | (Y = " + posY + ")");
+        } else {
+            System.out.println("Chocaste con el limite.");
+        }
     }
 
     public void moverDerecha() {
-//        if (!chocado && posX < 80) {
-//            posX += 1;
-//            System.out.println("La posición del auto es (X = " + posX + ") | (Y = " + posY + ")");
-//        } else {
-//            JOptionPane.showMessageDialog(null, "No se puede mover");
-//        }
+        if (!chocado && posX < LIMIT_X) {
+            setPosX(getPosX() + speed);
+            System.out.println("La posición del vehículo es (X = " + posX + ") | (Y = " + posY + ")");
+        } else {
+            System.out.println("Chocaste con el limite.");
+        }
+    }
+
+    public void moverIzquierda() {
+        if (!chocado && posX > 0) {
+            setPosX(getPosX() - speed);
+            System.out.println("La posición del vehículo es (X = " + posX + ") | (Y = " + posY + ")");
+        } else {
+            System.out.println("Chocaste con el limite.");
+        }
     }
 
 }

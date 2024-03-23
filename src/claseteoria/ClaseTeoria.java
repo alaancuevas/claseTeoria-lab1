@@ -7,7 +7,7 @@ package claseteoria;
 public class ClaseTeoria {
 
     public static void main(String[] args) {
-        Vehiculo fitito = new Auto(2, 10);
+        Vehiculo fitito = new Camion(40, 11);
         Escena miEscena = new Escena(fitito);
         miEscena.Jugar();
         miEscena.setVehiculo(fitito);

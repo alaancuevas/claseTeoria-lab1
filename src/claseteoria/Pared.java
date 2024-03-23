@@ -14,11 +14,12 @@ public class Pared {
     private int posY;
 
     public Pared() {
-        posX = (int) (Math.random() * 75);
-        posY = (int) (Math.random() * 17);
-        System.out.println("-------------------------------------");
-        System.out.println("Posicion de la PARED es (X = " + posX + ") | (Y = " + posY + ")");
-        System.out.println("-------------------------------------");
+        posX = (int) (Math.random() * 80) / 5 * 5;
+        posY = (int) (Math.random() * 22) / 5 * 5;
+        System.out.println("-----------------------------------------------------");
+        System.out.println("Posición de la PARED es (X = " + posX + " a " + (posX + 5) + ") | (Y = " + posY + " a "
+                + (posY + 5) + ")");
+        System.out.println("-----------------------------------------------------");
     }
 
     public int getPosX() {

@@ -1,13 +1,15 @@
 package claseteoria;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Falivene
  */
-public class Moto extends Vehiculo {
-    
+class Moto extends Vehiculo {
+
     public Moto(int posX, int posY) {
-        super(posX, posY);
+        super(posX, posY, 10);
     }
-    
+
 }

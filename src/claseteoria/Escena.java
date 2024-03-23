@@ -21,28 +21,28 @@ public class Escena {
 
             switch (mover) {
                 case 'w':
-                    if (vehiculo.getPosY() > 0) {
+                    if (vehiculo.getPosY() - vehiculo.getSpeed() >= 0) {
                         vehiculo.moverArriba();
                     } else {
                         System.out.println("Chocaste con el limite.");
                     }
                     break;
                 case 'a':
-                    if (vehiculo.getPosX() > 0) {
+                    if (vehiculo.getPosX() - vehiculo.getSpeed() > 0) {
                         vehiculo.moverIzquierda();
                     } else {
                         System.out.println("Chocaste con el limite.");
                     }
                     break;
                 case 's':
-                    if (vehiculo.getPosY() < 22) {
+                    if (vehiculo.getPosY() + vehiculo.getSpeed() < 22) {
                         vehiculo.moverAbajo();
                     } else {
                         System.out.println("Chocaste con el limite.");
                     }
                     break;
                 case 'd':
-                    if (vehiculo.getPosX() < 80) {
+                    if (vehiculo.getPosX() + vehiculo.getSpeed() < 80) {
                         vehiculo.moverDerecha();
                     } else {
                         System.out.println("Chocaste con el limite.");
@@ -57,9 +57,13 @@ public class Escena {
                     System.out.println("------------------------------------------");
                     break;
             }
-            if (vehiculo.getPosX() == pared.getPosX() && vehiculo.getPosY() == pared.getPosY()) {
-                vehiculo.setChocado(true);
+
+            if (vehiculo.getPosX() >= pared.getPosX() && vehiculo.getPosX() <= pared.getPosX() + 5 &&
+                    vehiculo.getPosY() >= pared.getPosY() && vehiculo.getPosY() <= pared.getPosY() + 5) {
+
                 System.out.println("CHOCASTE LA PARED!");
+
+                vehiculo.setChocado(true);
             }
 
         } while (mover != 'e');
